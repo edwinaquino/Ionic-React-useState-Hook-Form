@@ -1,0 +1,7 @@
+{
+  "name": "two-way-binding-with-usestate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
