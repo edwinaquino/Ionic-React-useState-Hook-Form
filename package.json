@@ -1,6 +1,7 @@
 {
   "name": "two-way-binding-with-usestate",
   "version": "0.0.1",
+ "homepage": "./",
   "private": true,
   "dependencies": {
     "@capacitor/app": "1.0.3",
@@ -40,6 +41,7 @@
     "workbox-strategies": "^5.1.4",
     "workbox-streams": "^5.1.4"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

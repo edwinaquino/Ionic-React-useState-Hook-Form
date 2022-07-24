@@ -1,12 +1,40 @@
-import './ExploreContainer.css';
+import { useState } from "react";
+import "./ExploreContainer.css";
+import {
+  IonInput,
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCardContent,
+} from "@ionic/react";
 
-interface ContainerProps { }
+const ExploreContainer: React.FC = () => {
+  const [text, setText] = useState<any>(() => {
+    return ""; // return default value
+  });
 
-const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
-    <div className="container">
-      <strong>Ready to create an app?</strong>
-      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div className="container text-center text-align: center">
+      <IonCard>
+        <IonCardHeader>
+          <IonCardSubtitle>Ionic React useState Hook Example</IonCardSubtitle>
+          <IonCardTitle>
+            <strong>Hello There, {text}!</strong>
+          </IonCardTitle>
+        </IonCardHeader>
+
+        <IonCardContent>
+          <IonInput
+            value={text}
+            placeholder="Please enter your name"
+            onIonChange={(e) => setText(e.detail.value!)}
+          ></IonInput>
+          The purpose of this very simple app is to show a very simple way to
+          implement useState in your project by sending date from a child
+          component to the parent component.
+        </IonCardContent>
+      </IonCard>
     </div>
   );
 };
